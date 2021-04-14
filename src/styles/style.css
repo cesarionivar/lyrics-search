@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap');
+*, 
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+  font-family: 'Cabin', sans-serif;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  z-index: 990;
+}
+
+.header::before {
+  content: '';
+  background-color: #ccc;
+  background-image: url('https://cdn.pixabay.com/photo/2017/08/02/05/49/recording-2570056_960_720.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: .7;
+}
+
+.title {
+  z-index: 992;
+  margin-bottom: 2rem;
+  letter-spacing: 3px;
+  font-size: 4rem;
+  color: #f96900;
+}
+
+.search-form {
+  position: relative;
+  z-index: 991;
+  width: 50%;
+}
+
+.search-form .inputSearch {
+  position: relative;
+  width: 100%;
+  border: none;
+  border-radius: 30px;
+  margin: 0;
+  padding: 1rem 9rem 1rem 2rem;
+  box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.5);
+  font-size: 1.4rem;
+  font-family: inherit;
+  color: #191923;
+  outline: none;
+}
+
+.search-form .btnSearch {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border: none;
+  border-radius: 30px;
+  margin: 0;
+  padding: 1rem 2rem 1rem 2rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  outline: none;
+  background-color: #0e79b2;
+  color: #fbfef9;
+  transform: scale(.9253);
+  transition: opacity .3s ease-in, transform .2s ease-in;
+
+}
+
+.search-form .btnSearch:hover {
+  opacity: .7;
+}
+
+.search-form .btnSearch:active {
+  transform: scale(.8);
+}
+
+.content {
+  width: 50%;
+  margin-bottom: 2rem;
+}
+
+.artist-song {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #191923;
+}
+
+.artist-song:last-child {
+  border-bottom: none;
+}
+
+.artist-song .get-song {
+  border: none;
+  outline: none;
+  padding: .5rem;
+  background-color: #bf1363;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.artist-song .get-song:hover {
+  opacity: .8;
+}
+
+.song-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.song blockquote {
+  white-space: pre-wrap;
+}
+
+@media screen and (max-width: 640px) {
+  .content {
+    width: 100%;
+    padding: 0rem 1rem;
+  }
+
+  .header h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .search-form {
+    width: unset;
+    margin: 0rem .5rem;
+  }
+
+  .search-form .inputSearch {
+    font-size: 1rem;
+    padding: 1rem 5rem 1rem 2rem;
+  }
+
+  .search-form .btnSearch {
+    font-size: 1rem;
+    padding: 1rem .5rem 1rem .5rem;
+  }
+}
